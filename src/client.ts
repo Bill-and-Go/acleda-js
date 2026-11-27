@@ -1,5 +1,5 @@
 import { createHash, createHmac, randomBytes, timingSafeEqual } from 'node:crypto';
-import { khqrImage, type KhqrImageOptions } from '@basilbook/khqr/image';
+import { khqrImage, type KhqrImageOptions } from '@bill-and-go/khqr/image';
 import { AcledaConfigError, AcledaInputError, AcledaRefusedError, AcledaUnreachableError } from './errors.js';
 
 /**

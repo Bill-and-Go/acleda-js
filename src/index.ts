@@ -1,8 +1,8 @@
 /**
- * @basilbook/acleda (#1687): ACLEDA ToanChet Pay (XPAY) for Node — open a KHQR payment (its text,
+ * @bill-and-go/acleda (#1687): ACLEDA ToanChet Pay (XPAY) for Node — open a KHQR payment (its text,
  * or an image of it), ask whether it was paid, refund it, and the hash ACLEDA checks. Credentials
  * are passed in, never read from the environment; amounts are integer minor units with their
- * currency. The PHP twin, `basilbook/acleda`, has the same calls (`AcledaClient`,
+ * currency. The PHP twin, `bill-and-go/acleda`, has the same calls (`AcledaClient`,
  * `AcledaClient::hash`, …).
  */
 export {

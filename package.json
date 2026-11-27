@@ -1,12 +1,12 @@
 {
-  "name": "@basilbook/acleda",
+  "name": "@bill-and-go/acleda",
   "version": "0.1.0",
   "description": "ACLEDA ToanChet Pay (XPAY) for Node: open a KHQR payment (as a string or an image), check it, refund, and the hash ACLEDA checks. No framework.",
   "license": "MIT",
-  "author": "BasilBook",
-  "repository": { "type": "git", "url": "git+https://github.com/basilbook/acleda-js.git" },
-  "bugs": { "url": "https://github.com/basilbook/acleda-js/issues" },
-  "homepage": "https://github.com/basilbook/acleda-js",
+  "author": "bill&go",
+  "repository": { "type": "git", "url": "git+https://github.com/Bill-and-Go/acleda-js.git" },
+  "bugs": { "url": "https://github.com/Bill-and-Go/acleda-js/issues" },
+  "homepage": "https://github.com/Bill-and-Go/acleda-js",
   "keywords": ["acleda", "acleda-bank", "toanchet", "xpay", "khqr", "cambodia", "payments"],
   "sideEffects": false,
   "main": "./dist/cjs/index.js",
@@ -33,11 +33,11 @@
     "prepublishOnly": "node build-dual.mjs"
   },
   "dependencies": {
-    "@basilbook/khqr": "^0.1.0"
+    "@bill-and-go/khqr": "^0.1.0"
   },
   "devDependencies": {
-    "@types/node": "^25.9.3",
+    "@types/node": "^25.9.9",
     "typescript": "^6.0.3",
-    "vitest": "^5.0.5"
+    "vitest": "^5.1.1"
   }
 }

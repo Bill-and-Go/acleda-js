@@ -1,4 +1,4 @@
-# @basilbook/acleda
+# @bill-and-go/acleda
 
 ACLEDA ToanChet Pay (XPAY) for Node: open a KHQR payment (its text, or an image of it), ask
 whether it was paid, refund it, and the hash ACLEDA checks. No framework; your credentials are
@@ -9,21 +9,21 @@ passed in, never read from the environment.
 - Typed errors, a `log` hook that never sees a secret, an injectable `fetch` and clock.
 - ES modules and CommonJS, with types. Node 18 or later (it uses `fetch` and Node's `crypto`).
 
-Made by BasilBook for [Bill&Go](https://billandgo.app), MIT. The PHP twin is
-[`basilbook/acleda`](https://packagist.org/packages/basilbook/acleda) on Packagist, with **the same
+Made by bill&go for [BasilBook](https://billandgo.app), MIT. The PHP twin is
+[`bill-and-go/acleda`](https://packagist.org/packages/bill-and-go/acleda) on Packagist, with **the same
 calls** (see [the same calls in PHP](#the-same-calls-in-php)). KHQR itself is
-[`@basilbook/khqr`](https://www.npmjs.com/package/@basilbook/khqr).
+[`@bill-and-go/khqr`](https://www.npmjs.com/package/@bill-and-go/khqr).
 
 ## Install
 
 ```sh
-npm install @basilbook/acleda
+npm install @bill-and-go/acleda
 ```
 
 ## Quick start
 
 ```ts
-import { AcledaClient, acledaCallbackToken, acledaCallbackTokenHash, acledaCallbackUrl, verifyAcledaCallback } from '@basilbook/acleda';
+import { AcledaClient, acledaCallbackToken, acledaCallbackTokenHash, acledaCallbackUrl, verifyAcledaCallback } from '@bill-and-go/acleda';
 
 const acleda = new AcledaClient({
   loginId: 'shop-login',
@@ -60,7 +60,7 @@ withImage.image; // 'data:image/png;base64,…', drawn from withImage.qr
 ```
 
 ACLEDA sends only the text; with `format: 'image'` the image is drawn from it by
-`@basilbook/khqr/image` (`image: { type: 'svg', size, margin }` to choose).
+`@bill-and-go/khqr/image` (`image: { type: 'svg', size, margin }` to choose).
 
 ## Callbacks
 
@@ -144,7 +144,7 @@ All extend `AcledaError` (PHP: `AcledaException`, and each below is `…Exceptio
 
 ## The same calls in PHP
 
-`composer require basilbook/acleda` gives the same calls, the same requests, the same results and
+`composer require bill-and-go/acleda` gives the same calls, the same requests, the same results and
 the same errors, checked by tests that run this package's own requests and answers
 (`tests/fixtures/ts-vectors.json`). What differs is only each language's own way: a function here
 is a static method of `AcledaClient` there, without the word ACLEDA (`acledaHash` →
@@ -164,14 +164,14 @@ the longest lifetime, and `operationType` / `terminalId`. Start in UAT, with dol
 
 ## Contributing and tests
 
-In BasilBook's Bill&Go repository at `packages/acleda`; the PHP twin at `packages/php/acleda`. A
+In BasilBook's BasilBook repository at `packages/acleda`; the PHP twin at `packages/php/acleda`. A
 change to one is made to both: build, then run `node packages/php-vectors.mjs` to write the PHP
 tests' vectors from this package, and run both test suites. Tests use a fake `fetch`; nothing
 reaches ACLEDA.
 
 ```sh
-pnpm --filter @basilbook/acleda... build
-pnpm --filter @basilbook/acleda test
+pnpm --filter @bill-and-go/acleda... build
+pnpm --filter @bill-and-go/acleda test
 ```
 
 Report a security issue privately through GitHub's *Report a vulnerability*, not in a public issue.
